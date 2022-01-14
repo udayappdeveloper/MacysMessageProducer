@@ -39,11 +39,7 @@ public class MessagingControllerTest {
 
 	@Test
 	public void sendJsonMessageTest2() throws Exception {
-
-		// assertEquals(1, 1);
-
 		OrderMessageJson mockMsg = new OrderMessageJson();
-
 		mockMsg.setMessageName("ITEMADDEDBYKALLURI");
 		mockMsg.setCommand("ADD");
 		mockMsg.setItemName("WALLETADDEDBYUDAY");
