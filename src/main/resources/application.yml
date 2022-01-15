@@ -8,7 +8,8 @@ spring.rabbitmq:
   password: guest
 
 spring:
-  jackson:
-    serialization:
-      fail-on-empty-beans: false
-
+  cloud:
+    gcp:
+      project-id: macy-gcp-2022
+      credentials:
+        location: file:C:\Users\UK64512\Desktop\GoogleGCPCrdentials\macy-gcp-2022-ff5099601b3d.json

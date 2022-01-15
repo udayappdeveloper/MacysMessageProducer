@@ -17,7 +17,7 @@ public class MessageSenderComponent {
 
 	@Autowired
 	private Queue xmlQueue;
-	
+
 	@Autowired
 	AmqpTemplate xmlSendTemplate;
 

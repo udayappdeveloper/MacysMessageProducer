@@ -23,10 +23,22 @@ public class MessagingController {
 	ResponseEntity<Boolean> sendJsonMessage(@RequestBody OrderMessageJson orderMessageJson) {
 		return messageService.sendJsonMessage(orderMessageJson);
 	}
+	
+	
+	@PostMapping(value = "/gcp/json", consumes = { MediaType.APPLICATION_JSON_VALUE })
+	ResponseEntity<Boolean> sendJsonMessageWithGCP(@RequestBody OrderMessageJson orderMessageJson) {
+		return messageService.sendJsonMessageWithGCP(orderMessageJson);
+	}
+
 
 	@PostMapping(value = "/xml", consumes = { MediaType.APPLICATION_XML_VALUE })
 	ResponseEntity<Boolean> sendXmlMessage(@RequestBody FulfillmentOrder fulfillmentOrder) {
 		return messageService.sendXmlMessage(fulfillmentOrder);
+	}
+	
+	@PostMapping(value = "/gcp/xml", consumes = { MediaType.APPLICATION_XML_VALUE })
+	ResponseEntity<Boolean> sendXmlMessageWithGCP(@RequestBody FulfillmentOrder fulfillmentOrder) {
+		return messageService.sendXmlMessageWithGCP(fulfillmentOrder);
 	}
 
 }
