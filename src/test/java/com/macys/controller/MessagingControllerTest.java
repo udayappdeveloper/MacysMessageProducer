@@ -36,6 +36,8 @@ public class MessagingControllerTest {
 
 	@MockBean
 	private MessagingService messagingService;
+	
+	
 
 	@Test
 	public void sendJsonMessageTest2() throws Exception {
